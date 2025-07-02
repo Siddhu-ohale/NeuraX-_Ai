@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Form - Buddy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f87171, #fecaca);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .container {
+      backdrop-filter: blur(18px);
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 900px;
+      height: 95vh;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .robot-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .robot-section img {
+      max-width: 100%;
+      height: 380px;
+      object-fit: contain;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .form-section {
+      flex: 1;
+      min-width: 280px;
+      padding: 25px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 18px;
+      background: linear-gradient(to right, #f87171 0%, #fff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background: #1e293b;
+      color: #fff;
+      font-size: 15px;
+      transition: 0.3s ease;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      background: #334155;
+    }
+
+    input::placeholder {
+      color: #fff;
+      opacity: 0.75;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      font-size: 13px;
+    }
+
+    .checkbox input {
+      margin-right: 8px;
+      accent-color: #f87171;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #f87171;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 12px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 8px #f87171;
+    }
+
+    .btn:hover {
+      background: #f86464;
+      transform: scale(1.03);
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note a {
+      color: #f87171;
+      text-decoration: none;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 14px;
+    }
+
+    .social-buttons button {
+      background: #1e293b;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .social-buttons button:hover {
+      background: #f87171;
+      transform: translateY(-4px) scale(1.1);
+    }
+
+    .social-buttons img {
+      height: 26px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .robot-section img {
+        height: 180px;
+      }
+
+      .form-section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="robot-section">
+      <img src="images/roo.png" alt="Robot Buddy" />
+    </div>
+    <div class="form-section">
+      <h2>Sign Up <span style="color: #f87171;">Buddy!</span></h2>
+      <form>
+        <input type="email" placeholder="Enter Your Email" required />
+        <input type="password" placeholder="Enter Your Password" required />
+        <div class="checkbox">
+          <input type="checkbox" required />
+          <label>I agree to Terms of Conditions and Privacy Policy</label>
+        </div>
+        <button class="btn">Sign Up</button>
+      </form>
+      <p class="note">Already have an account? <a href="#">Sign In</a></p>
+      <div class="social-buttons">
+        <button><img src="/images/Google logo.png" alt="Google" /></button>
+        <button><img src="images/Micro_logo.png" alt="Microsoft" /></button>
+        <button><img src="images/twitter_logo.png" alt="Twitter" /></button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

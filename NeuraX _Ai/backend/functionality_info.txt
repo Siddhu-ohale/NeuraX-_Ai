@@ -1,0 +1,70 @@
+# BAAP AI Backend Functionality & Command Prompt Information
+
+This file documents the main features and command prompts supported by the BAAP AI backend (Flask app + tatchi.py).
+
+## Core Functionalities
+
+- **Chat AI (Gemini/Google Generative AI):**
+  - General Q&A, conversation, and information lookup.
+  - Example: "What is the capital of France?"
+
+- **Company Info:**
+  - Ask about company, founder, mission, services, education, agriculture, infrastructure, contact, etc.
+  - Example: "Who is the founder of Baap Company?"
+
+- **Weather & Time:**
+  - Get current weather, forecast, time, date, and day for supported locations.
+  - Example: "What's the weather in Mumbai?" / "What time is it in Pune?"
+
+- **Location Setting:**
+  - Change the default city for time/weather queries.
+  - Example: "Set location to Delhi"
+
+- **PC Control (Windows/Linux/macOS):**
+  - Shutdown, restart, sleep the PC.
+  - Example: "Shutdown PC", "Restart PC", "Sleep PC"
+
+- **Open Applications:**
+  - Open system or web applications (Notepad, Calculator, Chrome, WhatsApp, YouTube, etc.).
+  - Example: "Open Notepad", "Open WhatsApp"
+
+- **YouTube Search & Play:**
+  - Play YouTube videos by query.
+  - Example: "Play Alan Walker Faded on YouTube"
+
+- **PDF Conversion:**
+  - Convert images or text to PDF via `/convert-to-pdf` and `/convert-text-to-pdf` endpoints.
+
+- **Voice Recognition:**
+  - Voice input via browser (if supported). If not available, fallback to text input.
+
+- **Chat History:**
+  - Local chat history in browser (not server-side).
+
+## Error/Status Messages
+
+- **Microphone Not Available:**
+  - If browser/device does not support voice input, fallback to text input. You can always type your question and get an answer.
+
+- **Too Many Requests:**
+  - If you send too many requests in a short time, you may be rate-limited. Wait a moment and try again.
+
+- **Empty/Invalid Message:**
+  - If you send an empty or invalid message, you'll be prompted to enter a valid question.
+
+- **Server/Network Errors:**
+  - If the backend is not running or network fails, you'll see an error message.
+
+## Example Prompts
+
+- "Who created you?"
+- "What services does Baap Company offer?"
+- "Weather in Sangamner tomorrow"
+- "Open calculator"
+- "Shutdown PC"
+- "Convert image to PDF"
+- "Play motivational video on YouTube"
+
+---
+
+For more details, see the backend code in `app.py` and `tatchi.py`.
